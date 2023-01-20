@@ -59,7 +59,14 @@ function App() {
         }
       />
 
-      {times.map(time => <Time nome={time.nome}/>)}
+      {times.map((time) => (
+        <Time
+          key={time.nome}
+          nome={time.nome}
+          corPrimaria={time.corPrimaria}
+          corSecundaria={time.corSecundaria}
+        />
+      ))}
       
     </div>
   );
